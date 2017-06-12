@@ -1,0 +1,17 @@
+if choice ? choice : choice = []
+
+//begin choice
++b.SECTION.choice(class= choice.classMod ? choice.classMod : '')
+	+b.container
+		+b.H2.title-md= choice.title
+		+b.choice-slider.js-choice-slider
+			mixin choiceSLdItem(item)
+				+e.item
+					+e.item-pic(style='background-image: url(img/content/choice-sld_#{item.img}.jpg)')
+					+e.item-text
+						+e.H5.item-title= item.title
+						+e.P.item-descr= item.descr
+
+			each item in choiceSldList
+				+choiceSLdItem(item)
+//end choice

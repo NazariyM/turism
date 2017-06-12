@@ -1,0 +1,20 @@
+if whyUs ? whyUs : whyUs = []
+
+//begin 
++b.SECTION.why-us(class= whyUs.classMod ? whyUs.classMod : '')
+	+b.container
+		+b.H2.title-md._norm= whyUs.title
+		+b.why-us__container
+			+e.row
+				mixin whyUs(item)
+					+e.item
+						+e.item-pic
+							+e.IMG(src='img/content/why-us_#{item.pic}.png').item-img
+						+e.P.item-text= item.text
+							if item.smallText
+								= ' '
+								+e.SMALL= item.smallText
+
+				each item in whyUsList
+					+whyUs(item)
+//end 

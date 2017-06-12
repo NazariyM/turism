@@ -1,0 +1,62 @@
+.choice
+	&-slider
+		display: none
+		margin-top: 45px
+		&.slick-initialized
+			display: block
+		.slick-dots
+			position: absolute
+			left: 62%
+			bottom: 6px
+			z-index: 2
+			font-size: 0
+			li
+				display: inline-block
+				vertical-align: middle
+				&:not(:last-child)
+					margin-right: 4px
+				&.slick-active button
+					background: #0590ff
+			button
+				width: 13px
+				height: 13px
+				border-radius: 50%
+				background: $white
+				+hide-text
+		&__btn
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			background: transparent
+			z-index: 2
+			font-size: 0
+			&_prev
+				left: 20px
+			&_next
+				right: 20px
+			&-icon
+				fill: $white
+				font-size: 23px
+		&__item
+			position: relative
+			&-pic
+				padding-top: percentage(405 / 1256)
+				+cover
+			&-text
+				position: absolute
+				top: 0
+				left: 0
+				right: 50.2%
+				bottom: 0
+				z-index: 1
+				padding: 75px 55px 75px 120px
+				color: $white
+				background-color: rgba(#0590ff, .8)
+			&-title
+				margin-bottom: 5px
+				font-size: 39px
+			&-dsecr
+				font-size: 16px
+				line-height: (30/16)
+	&_default
+		padding: 90px 0

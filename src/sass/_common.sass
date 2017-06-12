@@ -1,0 +1,173 @@
+body
+	min-width: 320px
+	+f('cr',18)
+	+smooth-font
+	line-height: 1.4
+	color: $grey
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
+	+lg
+		font-size: 17px
+	+sm
+		font-size: 16px
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a
+	color: inherit
+	text-decoration: none
+	
+img
+	display: block
+	
+strong
+	+f('cb')
+	
+// basic transition
+=trs
+	transition: .25s ease-out
+	
+.out
+	overflow: hidden
+	
+.container
+	max-width: 1286px
+	margin: 0 auto
+	padding: 0 15px
+	+lg
+		max-width: 1200px
+	+sm
+		padding: 0 10px
+
+.btn
+	display: inline-block
+	padding: 15px 43px
+	border-radius: 3px
+	background: $blue
+	+f('cb', 18)
+	color: #fff
+	line-height: 1.1
+	+tr(background .25s ease-out)
+	&:hover
+		background: darken($blue, 8)
+		
+.btn-transparent
+	display: inline-block
+	padding: 6px 10px 6px 10px
+	background-color: transparent
+	+f('cb', 16)
+	color: $white
+	border: 2px solid $white
+	border-radius: 3px
+	+trs
+	&_border
+		color: #000
+		border-radius: 3px
+		border: 2px solid $blue
+	&_blue
+		background-color: #0590ff
+		border: none
+		&:hover
+			background-color: darken(#0590ff, 10)
+	
+.title-sm
+	+f('cb', 32)
+	line-height: 1.4
+	color: $white
+	&_color
+		color: $grey
+	
+.title-md
+	+f('cb', 40)
+	text-transform: uppercase
+	color: $grey
+	text-align: center
+	+lg
+		font-size: 38px
+	+sm
+		font-size: 30px
+	+xs
+		font-size: 20px
+	&_norm
+		text-transform: none
+
+//.sect-title
+//	position: relative
+//	padding: 15px 15px 14px
+//	border-bottom: 1px solid rgba(#000, .1)
+//	text-align: center
+//	+lg
+//		padding: 10px 15px 10px
+//	+md
+//		padding: 0 15px 9px
+//	&::after
+//		position: absolute
+//		bottom: 0
+//		left: calc(50% - 58px)
+//		width: 116px
+//		height: 3px
+//		background: $blue
+//		content: ''
+//	&__container
+//		position: relative
+//	&__link
+//		position: absolute
+//		right: 15px
+//		top: 50%
+//		transform: translateY(-50%)
+//		+xs
+//			display: none
+//		span
+//			margin-left: 20px
+//			+sm
+//				margin-left: 5px
+//	&_has-link &__text
+//		max-width: 700px
+//		margin: 0 auto
+		
+.link-decor
+	display: inline-block
+	vertical-align: middle
+	color: $grey
+	&:hover
+		color: $blue
+	&:hover span
+		background-image: linear-gradient(to right, $blue 50%, transparent 50%)
+	span
+		display: inline-block
+		vertical-align: middle
+		padding-bottom: 2px
+		background-color: transparent
+		background-image: linear-gradient(to right, rgba($grey, .6) 50%, transparent 50%)
+		background-position: 100% 100%
+		background-size: 9px 1px
+		background-repeat: repeat-x
+		+sm
+			padding-bottom: 0
+	&_has-icon
+		span
+			margin-left: 10px
+			+xs
+				margin-left: 5px
+		.icon
+			+xs
+				transform: scale(.9)
+
+
+.input
+	width: 100%
+	padding: 8px 10px
+	+f('cr', 16)
+	color: $grey
+	+placeholder-color(#a8a8a8)
+	border-radius: 3px
+	
+.icon
+	display: inline-block
+	vertical-align: middle

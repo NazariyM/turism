@@ -1,0 +1,18 @@
+if travelGallery ? travelGallery : travelGallery = []
+
+//begin travel-gallery
++b.travel-gallery(class= travelGallery.classMod ? travelGallery.classMod : '')
+	+e.container.container
+		+e.row
+			mixin travelItem(item)
+				+e.A.item(href='#!')
+					+e.DIV.item-pic-wrap
+						+e.item-pic(style='background-image: url(img/content/travel-gallery_#{item.picture}.jpg)')
+					+e.P.item-text= item.text
+			each item in travelList
+				+travelItem(item)
+
+		+e.actions
+			+e.A.actions-btn.btn-transparent(href='#!') Заказать звонок консультанта
+			+e.A.actions-btn.btn-transparent(href='#!') Забронировать тур онлайн
+//end travel-gallery

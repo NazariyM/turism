@@ -1,0 +1,129 @@
+---
+title: РосВояж
+---
+extends layouts/_layout
+
+block content
+
+	//begin contact
+	+b.SECTION.contact._default
+		+e.container.container
+			+b.H3.title-sm.contact__title._upper._color Бесплатная консультация по подбору круиза
+			+e.FORM
+				+e.form-in._sm
+					+e.form-field._border
+						+png('user')
+						+e.INPUT(type='text' name='' placeholder='Имя').form-input.input
+					+e.form-field._border
+						+png('call')
+						+e.INPUT(type='text' name='' placeholder='Телефон').form-input.input
+					+e.form-field
+						+e.BUTTON(type='submit').form-btn.btn-transparent._blue Подберите мне круиз
+	//end contact
+
+	//-begin why-us
+	-
+		var whyUs = {
+		classMod: '_default',
+		title: 'Почему я выбираю отдых на теплоходе "Алексей Толстой'
+		};
+		var whyUsList = [{
+		text: 'Комфортабельный 4-х палубный теплоход',
+		pic: '1'},{
+		text: 'Тематические рейсы и зажигательные шоу-программы',
+		pic: '2'},{
+		text: 'Уютные каюты',
+		pic: '3'},{
+		text: 'Выгодные цены - туры от собственника теплохода',
+		pic: '4'},{
+		text: 'Отличный сервис',
+		pic: '5'},{
+		text: 'Интересная и необычная кухня',
+		smallText: '(более 10 видов: русская, грузинская, украинская, немецкая, японская, узбекская и.тд., на заказ)',
+		pic: '6'
+		}];
+	include components/_why-us
+	//-end why-us
+
+	//- team section
+	-
+		var team = {
+		classMod: '_default',
+		title: 'НАША КОМАНДА'
+		}
+	include components/_team
+
+	//- bar section
+	-
+		var travelGallery = {classMod: '_default'};
+		var travelList = [{
+		picture: '1',
+		text: 'Самара-Казань-Самара'
+		},{
+		picture: '2',
+		text: 'Самара-Волгоград-Самара'
+		},{
+		picture: '3',
+		text: 'Самара-Астрахань-Самара'
+		},{
+		picture: '4',
+		text: 'Самара-Н.Новгород-Самара'
+		},{
+		picture: '5',
+		text: 'Самара-Волжский Утес-Самара'
+		},{
+		picture: '6',
+		text: 'Самара-Казань-Ярославль-Кострома-Самара'
+		},{
+		picture: '7',
+		text: 'Золотое кольцо'
+		},{
+		picture: '8',
+		text: 'Южный путь'
+		}];
+	include components/_travel-gallery
+
+	//- choice section
+	-
+		var choice = {
+		classMod: '_default',
+		title: 'Выберите свою каюту на т/х Алексей Толстой!'
+		};
+		var choiceSldList = [{
+		img: '1',
+		title: 'Люкс',
+		descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+		},{
+		img: '2',
+		title: 'Люкс',
+		descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+		},{
+		img: '1',
+		title: 'Люкс',
+		descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+		},{
+		img: '2',
+		title: 'Люкс',
+		descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+		}];
+	include components/_choice
+
+	//- testimonials
+	-
+		var testimonialsClass = '_has-bg';
+		testimonialsSlider = [{
+		text: '“Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”'
+		},{
+		text: '“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”'
+		},{
+		text: '"Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой"'
+		},{
+		text: '“ Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”'
+		},{
+		text: '“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”'
+		}];
+	include components/_testimonials
+
+	//- about
+	-var aboutClass = '_default';
+	include components/_about

@@ -1,0 +1,34 @@
+if team ? team : team = []
+
+//begin team
++b.SECTION.team(class= team.classMod ? team.classMod : '')
+	+b.container
+		+b.H2.title-md= team.title
+	+e.container.container
+		+e.person
+			+e.person-img-wrap
+				+e.person-img(style='background-image: url("img/content/team_person.jpg")')
+			+e.person-text
+				+e.P Капитан
+		+e.person
+			+e.person-img-wrap
+				+e.person-img(style='background-image: url("img/content/team_person.jpg")')
+			+e.person-text
+				+e.P Капитан
+		+e.person._lg
+			+e.person-img-wrap
+				+e.person-img(style='background-image: url("img/content/team_person.jpg")')
+			+e.person-text
+				+e.P Директор ООО ТК "РосВояж"
+				+e.P Никонова Виолетта Сергеевна
+		+e.person
+			+e.person-img-wrap
+				+e.person-img(style='background-image: url("img/content/team_person.jpg")')
+			+e.person-text
+				+e.P Капитан
+		+e.person
+			+e.person-img-wrap
+				+e.person-img(style='background-image: url("img/content/team_person.jpg")')
+			+e.person-text
+				+e.P Капитан
+//end team

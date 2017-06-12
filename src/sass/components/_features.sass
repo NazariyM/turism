@@ -1,0 +1,164 @@
+.features
+	&_fun
+		padding: 90px 0 53px
+		+lg
+			padding: 60px 0 40px
+		+md
+			padding: 45px 0 40px
+		 +xs
+			 padding: 40px 0 30px
+	&_fun &__row
+		+xs
+			text-align: center
+	&_fun &__item
+		width: 20%
+		+xs
+			width: 33.33333%
+			min-width: 140px
+			padding-bottom: 15px
+	&_fun &__item-pic
+		margin-bottom: 9px
+	&_rest
+		padding: 55px 0 67px
+		+md
+			padding: 40px 0
+		+xs
+			padding: 20px 0 30px
+	&_rest &__item
+		+xs
+			width: 50%
+			padding: 0 5px
+	&_restaurant
+		padding: 80px 0 30px
+		+lg
+			padding: 40px 0 30px
+		+md
+			padding: 25px 0 10px
+		+sm
+			padding: 10px 0
+	&_restaurant &__container
+		max-width: 1280px
+	&_restaurant &__row
+		margin: 0 -15px
+		display: flex
+		justify-content: space-between
+		+sm
+			margin: 0 -5px
+			flex-wrap: wrap
+			justify-content: space-around
+		+xs
+			display: block
+	&_restaurant &__item
+		width: 20%
+		padding: 0 10px
+		+md
+			padding: 0 3px
+		+sm
+			width: 33.33333%
+	&_restaurant &__item-pic
+		+md
+			transform: none
+	&_restaurant &__item:nth-child(1)
+		width: 14%
+		+sm
+			order: 0
+			width: 33.33333%
+	&_restaurant &__item:nth-child(1) &__item-descr
+		max-width: 160px
+	&_restaurant &__item:nth-child(2)
+		width: 23.2%
+		+sm
+			order: 1
+			width: 33.33333%
+		+xs
+			order: 0
+	&_restaurant &__item:nth-child(2) &__item-descr
+		max-width: 220px
+	&_restaurant &__item:nth-child(3)
+		width: 23%
+		+sm
+			width: 33.33333%
+	&_restaurant &__item:nth-child(3) &__item-descr
+		max-width: 274px
+	&_restaurant &__item:nth-child(4)
+		width: 19.5%
+		+sm
+			width: 33.33333%
+	&_restaurant &__item:nth-child(4) &__item-descr
+		max-width: 228px
+	&_restaurant &__item:nth-child(5)
+		width: 18.6%
+		+sm
+			width: 33.33333%
+	&_restaurant &__item:nth-child(5) &__item-descr
+		max-width: 220px
+	&_restaurant &__item-descr
+		max-width: none
+		line-height: 1.1
+		+xs
+			margin-top: 15px
+			max-width: 320px !important
+	&_restaurant span
+		font-size: 16px
+	&__row
+		font-size: 0
+	&__item
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px
+		text-align: center
+		+sm
+			padding: 0 10px
+		&-pic
+			height: 100px
+			margin-bottom: 12px
+			+vertical
+			+sm
+				transform: scale(.8)
+				margin-bottom: 0
+			&::after
+				display: inline-block
+				vertical-align: middle
+				margin: 0 auto
+				content: ''
+		&-pic_modern::after
+			+s('modern')
+		&-pic_refrigerator::after
+			+s('refrigerator')
+		&-pic_repair::after
+			+s('repair')
+		&-pic_ship::after
+			+s('ship')
+		&-pic_menu::after
+			+s('menu')
+		&-pic_restaurant::after
+			+s('restaurant')
+		&-pic_diet::after
+			+s('diet')
+		&-pic_national::after
+			+s('national')
+		&-pic_ice-cream::after
+			+s('ice-cream')
+		&-pic_disco::after
+			+s('disco')
+		&-pic_conference::after
+			+s('conference')
+		&-pic_horse::after
+			+s('horse')
+		&-pic_masterclass::after
+			+s('masterclass')
+		&-pic_nutrition::after
+			+s('nutrition')
+		&-descr
+			max-width: 215px
+			margin: 0 auto
+			font-size: 18px
+			line-height: 1.3
+			+lg
+				font-size: 17px
+			+sm
+				font-size: 15px
+			strong
+				display: block
+				+f('cb')

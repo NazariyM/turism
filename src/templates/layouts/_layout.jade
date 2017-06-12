@@ -1,0 +1,22 @@
+include _mixins
+doctype html
+html
+  head
+    include _head
+
+  body(class=bodyClass)
+    include ../bemto/bemto
+    //BEGIN out
+    .out(class=outClass)
+      block header
+        include ../components/_header
+      block content
+
+      block footer
+        include ../components/_footer
+    //END out
+
+    //LOAD SCRIPTS
+    block scripts
+      script(type="text/javascript" src="js/app.js")
+      script(type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

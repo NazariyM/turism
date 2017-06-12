@@ -1,0 +1,219 @@
+$icons: (0:0)
+$icons: map-merge($icons,('binocular': (X: -386px, Y:-327px, W: 21px, H: 19px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('call': (X: -417px, Y:-327px, W: 16px, H: 16px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('conference': (X: -122px, Y:-113px, W: 104px, H: 98px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('diet': (X: -350px, Y:0px, W: 104px, H: 95px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('disco': (X: -122px, Y:0px, W: 104px, H: 103px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fan': (X: -277px, Y:-383px, W: 13px, H: 14px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('horse': (X: -236px, Y:-107px, W: 104px, H: 96px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ice-cream': (X: -228px, Y:-221px, W: 104px, H: 95px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('marker': (X: -349px, Y:-327px, W: 27px, H: 41px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('masterclass': (X: 0px, Y:-108px, W: 104px, H: 103px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('menu': (X: -236px, Y:0px, W: 104px, H: 97px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('modern': (X: -350px, Y:-210px, W: 104px, H: 91px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('national': (X: -114px, Y:-221px, W: 104px, H: 96px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('nutrition': (X: 0px, Y:-221px, W: 104px, H: 96px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -298px, Y:-327px, W: 41px, H: 41px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('quote': (X: -228px, Y:-327px, W: 60px, H: 46px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('refr': (X: -443px, Y:-327px, W: 9px, H: 15px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('refrigerator': (X: -350px, Y:-105px, W: 104px, H: 95px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('repair': (X: 0px, Y:-327px, W: 104px, H: 91px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('restaurant': (X: 0px, Y:0px, W: 112px, H: 98px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ship': (X: -114px, Y:-327px, W: 104px, H: 79px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sofa': (X: -386px, Y:-356px, W: 20px, H: 10px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('time': (X: -228px, Y:-383px, W: 15px, H: 15px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('toilet': (X: -253px, Y:-383px, W: 14px, H: 15px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tv': (X: -300px, Y:-383px, W: 13px, H: 12px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('user': (X: 0px, Y:-428px, W: 14px, H: 16px, TW: 454px, TH: 444px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)
+
+//
+//.icon-binocular
+//  width: 21px
+//  height: 19px
+//  background-image: url('../img/sprite.png')
+//  background-position: -386px -327px
+//
+//.icon-call
+//  width: 16px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -417px -327px
+//
+//.icon-conference
+//  width: 104px
+//  height: 98px
+//  background-image: url('../img/sprite.png')
+//  background-position: -122px -113px
+//
+//.icon-diet
+//  width: 104px
+//  height: 95px
+//  background-image: url('../img/sprite.png')
+//  background-position: -350px 0px
+//
+//.icon-disco
+//  width: 104px
+//  height: 103px
+//  background-image: url('../img/sprite.png')
+//  background-position: -122px 0px
+//
+//.icon-fan
+//  width: 13px
+//  height: 14px
+//  background-image: url('../img/sprite.png')
+//  background-position: -277px -383px
+//
+//.icon-horse
+//  width: 104px
+//  height: 96px
+//  background-image: url('../img/sprite.png')
+//  background-position: -236px -107px
+//
+//.icon-ice-cream
+//  width: 104px
+//  height: 95px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -221px
+//
+//.icon-marker
+//  width: 27px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: -349px -327px
+//
+//.icon-masterclass
+//  width: 104px
+//  height: 103px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -108px
+//
+//.icon-menu
+//  width: 104px
+//  height: 97px
+//  background-image: url('../img/sprite.png')
+//  background-position: -236px 0px
+//
+//.icon-modern
+//  width: 104px
+//  height: 91px
+//  background-image: url('../img/sprite.png')
+//  background-position: -350px -210px
+//
+//.icon-national
+//  width: 104px
+//  height: 96px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -221px
+//
+//.icon-nutrition
+//  width: 104px
+//  height: 96px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -221px
+//
+//.icon-phone
+//  width: 41px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: -298px -327px
+//
+//.icon-quote
+//  width: 60px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -327px
+//
+//.icon-refr
+//  width: 9px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -443px -327px
+//
+//.icon-refrigerator
+//  width: 104px
+//  height: 95px
+//  background-image: url('../img/sprite.png')
+//  background-position: -350px -105px
+//
+//.icon-repair
+//  width: 104px
+//  height: 91px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -327px
+//
+//.icon-restaurant
+//  width: 112px
+//  height: 98px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-ship
+//  width: 104px
+//  height: 79px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -327px
+//
+//.icon-sofa
+//  width: 20px
+//  height: 10px
+//  background-image: url('../img/sprite.png')
+//  background-position: -386px -356px
+//
+//.icon-time
+//  width: 15px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -383px
+//
+//.icon-toilet
+//  width: 14px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -383px
+//
+//.icon-tv
+//  width: 13px
+//  height: 12px
+//  background-image: url('../img/sprite.png')
+//  background-position: -300px -383px
+//
+//.icon-user
+//  width: 14px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -428px
+//
