@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>РосВояж</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#22273B">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header">
+        <div class="header__top-line">
+          <div class="header__container container">
+            <div class="hamburger js-hamburger">
+              <div class="hamburger__line"></div>
+              <div class="hamburger__line"></div>
+              <div class="hamburger__line"></div>
+            </div>
+            <div class="nav header__nav js-nav">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a href="#!" class="nav__list-link nav__list-link_main">Теплоход Алексей Толстой</a></li>
+                <li class="nav__list-item"><a href="#!" class="nav__list-link">Сотрудничество</a></li>
+                <li class="nav__list-item"><a href="#!" class="nav__list-link">Новости</a></li>
+                <li class="nav__list-item"><a href="#!" class="nav__list-link">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__screen">
+          <div style="background-image: url(img/bg/entry-screen_bg.jpg)" class="header__screen-pic"></div>
+          <div class="header__screen-container container"><a href="#!" class="logo header__logo"><img src="img/logo.png" class="logo__img" alt="" role="presentation"/></a>
+            <div class="menu header__menu">
+              <ul class="menu__list js-menu">
+                <li class="menu__list-item is-active"><a href="#!" class="menu__list-link">Речные круизы</a></li>
+                <li class="menu__list-item"><a href="#!" class="menu__list-link">Туры по России и СНГ</a></li>
+                <li class="menu__list-item"><a href="#!" class="menu__list-link">Международные туры</a></li>
+                <li class="menu__line js-moving-line"></li>
+              </ul>
+            </div>
+            <div class="call-me header__call-me"><a href="tel:88463327555" class="call-me__number">8 (846) 332-75-55</a><button type="button" class="call-me__btn link-decor"><span>Перезвоните мне</span></button></div><a href="#!" class="header__pick-btn btn">Подобрать тур</a></div>
+          <!--begin reserv-->
+          <div class="reserv reserv_screen">
+            <div class="reserv__container container">
+              <h2 class="reserv__title title-lg">Онлайн бронирование</h2>
+              <form>
+                <div class="reserv__form-in">
+                  <div class="reserv__form-field"><select class="reserv__form-select js-select"><option value="">Город отправления</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                  <div class="reserv__form-field"><select class="reserv__form-select js-select"><option value="">Город прибытия</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                  <div class="reserv__form-field reserv__form-field_date"><input type="text" placeholder="Дата отправления (от)" name="" class="reserv__form-input" /><button type="button" class="reserv__form-date-btn"></button></div>
+                  <div class="reserv__form-field reserv__form-field_date"><input type="text" placeholder="Дата отправления (от)" name="" class="reserv__form-input" /><button type="button" class="reserv__form-date-btn"></button></div><button type="submit" class="reserv__find-btn btn">Искать</button></div>
+                <div
+                  class="reserv__more"><button type="button" class="reserv__link-decor link-decor js-reserv-more"><span>Расширенный поиск</span></button>
+                  <div class="reserv__more-in">
+                    <div class="reserv__more-row">
+                      <div class="reserv__more-field reserv__more-field_md">
+                        <div class="reserv__more-label">Дата отправления</div>
+                        <div class="reserv__more-field-in"><span class="reserv__more-text">с</span><input type="text" name="" class="reserv__more-input" /><span class="reserv__more-text">по</span><input type="text" name="" class="reserv__more-input" /></div>
+                      </div>
+                      <div class="reserv__more-field reserv__more-field_sm">
+                        <div class="reserv__more-label">Теплоход</div><select class="reserv__form-select js-select"><option value="">Не важно</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                      <div class="reserv__more-field reserv__more-field_md">
+                        <div class="reserv__more-label">Продолжительность, дней</div>
+                        <div class="reserv__more-field-in"><span class="reserv__more-text">от</span><input type="text" name="" class="reserv__more-input" /><span class="reserv__more-text">до</span><input type="text" name="" class="reserv__more-input" /></div>
+                      </div>
+                    </div>
+                    <div class="reserv__more-row">
+                      <div class="reserv__more-field reserv__more-field_sm">
+                        <div class="reserv__more-label">Город отправления</div><select class="reserv__form-select js-select"><option value="">Любой</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                      <div class="reserv__more-field reserv__more-field_sm">
+                        <div class="reserv__more-label">Город прибытия</div><select class="reserv__form-select js-select"><option value="">Любой</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                      <div class="reserv__more-field reserv__more-field_sm">
+                        <div class="reserv__more-label">Через</div><select class="reserv__form-select js-select"><option value="">Любой</option><option value="">Самара</option><option value="">Самара</option><option value="">Самара</option></select></div>
+                    </div><button type="submit" class="reserv__find-more-btn btn">Найти круиз</button></div>
+            </div>
+            </form>
+          </div>
+        </div>
+        <!--end reserv-->
+    </div>
+    </header>
+    <!--END header-->
+    <!--begin contact-->
+    <section class="contact contact_default">
+      <div class="contact__container container">
+        <h3 class="title-sm contact__title contact__title_upper contact__title_color">Бесплатная консультация по подбору круиза</h3>
+        <form>
+          <div class="contact__form-in contact__form-in_sm">
+            <div class="contact__form-field contact__form-field_border"><i class="icon icon-user"></i><input type="text" name="" placeholder="Имя" class="contact__form-input input" /></div>
+            <div class="contact__form-field contact__form-field_border"><i class="icon icon-call"></i><input type="text" name="" placeholder="Телефон" class="contact__form-input input" /></div>
+            <div class="contact__form-field"><button type="submit" class="contact__form-btn btn-transparent btn-transparent_blue">Подберите мне круиз</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--end contact-->
+    <!--begin -->
+    <section class="why-us why-us_default">
+      <div class="container">
+        <h2 class="title-md title-md_norm">Почему я выбираю отдых на теплоходе &quot;Алексей Толстой</h2>
+      </div>
+      <div class="why-us__container">
+        <div class="why-us__row">
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_1.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Комфортабельный 4-х палубный теплоход</p>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_2.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Тематические рейсы и зажигательные шоу-программы</p>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_3.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Уютные каюты</p>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_4.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Выгодные цены - туры от собственника теплохода</p>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_5.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Отличный сервис</p>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__item-pic"><img src="img/content/why-us_6.png" class="why-us__item-img" alt="" role="presentation" /></div>
+            <p class="why-us__item-text">Интересная и необычная кухня <small>(более 10 видов: русская, грузинская, украинская, немецкая, японская, узбекская и.тд., на заказ)</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end -->
+    <!--begin team-->
+    <section class="team team_default">
+      <div class="container">
+        <h2 class="title-md">НАША КОМАНДА</h2>
+      </div>
+      <div class="team__container container js-team-slider">
+        <div class="team__person">
+          <div class="team__person-img-wrap">
+            <div style="background-image: url(&quot;img/content/team_person.jpg&quot;)" class="team__person-img"></div>
+          </div>
+          <div class="team__person-text">
+            <p>Капитан</p>
+          </div>
+        </div>
+        <div class="team__person">
+          <div class="team__person-img-wrap">
+            <div style="background-image: url(&quot;img/content/team_person.jpg&quot;)" class="team__person-img"></div>
+          </div>
+          <div class="team__person-text">
+            <p>Капитан</p>
+          </div>
+        </div>
+        <div class="team__person team__person_lg">
+          <div class="team__person-img-wrap">
+            <div style="background-image: url(&quot;img/content/team_person.jpg&quot;)" class="team__person-img"></div>
+          </div>
+          <div class="team__person-text">
+            <p>Директор ООО ТК "РосВояж"</p>
+            <p>Никонова Виолетта Сергеевна</p>
+          </div>
+        </div>
+        <div class="team__person">
+          <div class="team__person-img-wrap">
+            <div style="background-image: url(&quot;img/content/team_person.jpg&quot;)" class="team__person-img"></div>
+          </div>
+          <div class="team__person-text">
+            <p>Капитан</p>
+          </div>
+        </div>
+        <div class="team__person">
+          <div class="team__person-img-wrap">
+            <div style="background-image: url(&quot;img/content/team_person.jpg&quot;)" class="team__person-img"></div>
+          </div>
+          <div class="team__person-text">
+            <p>Капитан</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end team-->
+    <!--begin travel-gallery-->
+    <div class="travel-gallery travel-gallery_default">
+      <div class="travel-gallery__container container">
+        <div class="travel-gallery__row">
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_1.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Казань-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_2.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Волгоград-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_3.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Астрахань-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_4.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Н.Новгород-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_5.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Волжский Утес-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_6.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Самара-Казань-Ярославль-Кострома-Самара</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_7.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Золотое кольцо</p>
+          </a>
+          <a href="#!" class="travel-gallery__item">
+            <div class="travel-gallery__item-pic-wrap">
+              <div style="background-image: url(img/content/travel-gallery_8.jpg)" class="travel-gallery__item-pic"></div>
+            </div>
+            <p class="travel-gallery__item-text">Южный путь</p>
+          </a>
+        </div>
+        <div class="travel-gallery__actions"><a href="#!" class="travel-gallery__actions-btn btn-transparent">Заказать звонок консультанта</a><a href="#!" class="travel-gallery__actions-btn btn-transparent">Забронировать тур онлайн</a></div>
+      </div>
+    </div>
+    <!--end travel-gallery-->
+    <!--begin choice-->
+    <section class="choice choice_default">
+      <div class="container">
+        <h2 class="title-md">Выберите свою каюту на т/х Алексей Толстой!</h2>
+        <div class="choice-slider js-choice-slider">
+          <div class="choice-slider__item">
+            <div style="background-image: url(img/content/choice-sld_1.jpg)" class="choice-slider__item-pic"></div>
+            <div class="choice-slider__item-text">
+              <h5 class="choice-slider__item-title">Люкс</h5>
+              <p class="choice-slider__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="choice-slider__item">
+            <div style="background-image: url(img/content/choice-sld_2.jpg)" class="choice-slider__item-pic"></div>
+            <div class="choice-slider__item-text">
+              <h5 class="choice-slider__item-title">Люкс</h5>
+              <p class="choice-slider__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="choice-slider__item">
+            <div style="background-image: url(img/content/choice-sld_1.jpg)" class="choice-slider__item-pic"></div>
+            <div class="choice-slider__item-text">
+              <h5 class="choice-slider__item-title">Люкс</h5>
+              <p class="choice-slider__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="choice-slider__item">
+            <div style="background-image: url(img/content/choice-sld_2.jpg)" class="choice-slider__item-pic"></div>
+            <div class="choice-slider__item-text">
+              <h5 class="choice-slider__item-title">Люкс</h5>
+              <p class="choice-slider__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end choice-->
+    <!--begin testimonials-->
+    <section class="testimonials testimonials_has-bg">
+      <div class="testimonials__container container">
+        <h2 class="testimonials__title testimonials__title_color">Мы организовали отдых уже <strong>786 клиентам</strong></h2>
+        <div class="testimonials__slider js-testimonials-slider">
+          <div class="testimonials__slider-item">
+            <div class="testimonials__slider-in">
+              <blockquote class="testimonials__slider-text">“Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”</blockquote>
+              <div data-rate="4" class="rating testimonials__rating"><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+                <svg
+                  class="icon-star rating__star">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg></div>
+              <div class="testimonials__slider-person">Евгения, <span>7 декабря</span></div>
+            </div>
+          </div>
+          <div class="testimonials__slider-item">
+            <div class="testimonials__slider-in">
+              <blockquote class="testimonials__slider-text">“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”</blockquote>
+              <div data-rate="4" class="rating testimonials__rating"><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+                <svg
+                  class="icon-star rating__star">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg></div>
+              <div class="testimonials__slider-person">Евгения, <span>7 декабря</span></div>
+            </div>
+          </div>
+          <div class="testimonials__slider-item">
+            <div class="testimonials__slider-in">
+              <blockquote class="testimonials__slider-text">&quot;Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой&quot;</blockquote>
+              <div data-rate="4" class="rating testimonials__rating"><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+                <svg
+                  class="icon-star rating__star">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg></div>
+              <div class="testimonials__slider-person">Евгения, <span>7 декабря</span></div>
+            </div>
+          </div>
+          <div class="testimonials__slider-item">
+            <div class="testimonials__slider-in">
+              <blockquote class="testimonials__slider-text">“ Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”</blockquote>
+              <div data-rate="4" class="rating testimonials__rating"><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+                <svg
+                  class="icon-star rating__star">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg></div>
+              <div class="testimonials__slider-person">Евгения, <span>7 декабря</span></div>
+            </div>
+          </div>
+          <div class="testimonials__slider-item">
+            <div class="testimonials__slider-in">
+              <blockquote class="testimonials__slider-text">“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”</blockquote>
+              <div data-rate="4" class="rating testimonials__rating"><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+                <svg
+                  class="icon-star rating__star">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg><svg class="icon-star rating__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg></div>
+              <div class="testimonials__slider-person">Евгения, <span>7 декабря</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__more"><a href="#!" class="testimonials__more-btn btn">Еще отзывы</a></div>
+      </div>
+    </section>
+    <!--end testimonials-->
+    <!--begin about-->
+    <section class="about about_default">
+      <div class="about__container about__container_sm container">
+        <h4 class="about__title">Туристическая компания «РосВояж» предлагает вам совершить незабываемое путешествие, заказав морской круиз или речной круиз по Волге из Самары.</h4>
+        <p class="about__descr">ТК «РосВояж» г. Самара является официальным туроператором теплохода «Алексей Толстой». Наши сотрудники сами формируют маршруты речных круизов по Волге, проводят весь цикл технического обслуживания судна и комплектования его экипажем, а также готовят
+          для вас экскурсионные программы в городах следования и развлекательные программы на борту судна, тем самым предлагая круизным туристам безопасный и качественный отдых!</p>
+      </div>
+      <div class="about__map-wrap">
+        <div id="js-about-map" class="about__map"></div><address class="about__address"><div class="about__address-title">Ждем Вас у нас в офисе</div><ul class="about__address-list"><li class="about__address-str">ул. Алексея Толстого, д. 116 «В»<a href="tel:+78463321702">+7 (846) 332-17-02, 332-75-55</a></li><li class="about__address-str">ул. Максима Горького 82 (Речной вокзал)<a href="tel:+78462229034">+7 (846) 222-90-34</a></li><li class="about__address-str">ул. Стара-Загора, д.202 (ТЦ “Колизей”)<a href="+78469256682">+7 (846) 925-66-82</a></li><li class="about__address-str">ул.Самарская, д.268 (напротив “McDonalds”)<a href="+78462424922">+7 (846) 242-49-22</a></li></ul></address></div>
+    </section>
+    <!--end about-->
+    <!--begin footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__col">
+          <p class="footer__copy">Copyright © 2017 ООО ТК «РосВояж» – круизы по-новому!</p>
+        </div>
+        <div class="footer__col">
+          <div class="socials footer__socials"><a href="#!" class="socials__link"><svg class="icon-fb"><use xlink:href="img/sprite.svg#icon-fb"></use></svg></a><a href="#!" class="socials__link"><svg class="icon-tw"><use xlink:href="img/sprite.svg#icon-tw"></use></svg></a><a href="#!" class="socials__link"><svg class="icon-insta"><use xlink:href="img/sprite.svg#icon-insta"></use></svg></a>
+            <a
+              href="#!" class="socials__link"><svg class="icon-gp"><use xlink:href="img/sprite.svg#icon-gp"></use></svg></a>
+          </div>
+        </div>
+        <div class="footer__col footer__contact"><a href="#!" class="footer__contact-btn btn">Напишите нам</a>
+          <p class="footer__contact-dev">Сделано руками <a href="#!">Актиком</a></p>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  </body>
+
+</html>
