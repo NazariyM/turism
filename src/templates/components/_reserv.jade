@@ -19,11 +19,64 @@ if reserv ? reserv : reserv = []
 						+e.OPTION(value='') Самара
 						+e.OPTION(value='') Самара
 				+e.form-field._date
-					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)')
+					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)' name='')
+					+e.BUTTON.form-date-btn(type='button')
 				+e.form-field._date
-					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)')
-				+e.BUTTON.btn.btn(type='submit') Искать
-		+e.link
-			+e.A.link-decor.link-decor(href='#!')
-				+e.SPAN Расширенный поиск
+					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)' name='')
+					+e.BUTTON.form-date-btn(type='button')
+				+e.BUTTON.find-btn.btn(type='submit') Искать
+			+e.more
+				+e.BUTTON.link-decor.link-decor.js-reserv-more(type='button')
+					+e.SPAN Расширенный поиск
+				+e.more-in
+					+e.more-row
+						+e.more-field._md
+							+e.more-label Дата отправления
+							+e.more-field-in
+								+e.SPAN.more-text с
+								+e.INPUT.more-input(type='text' name='')
+								+e.SPAN.more-text по
+								+e.INPUT.more-input(type='text' name='')
+
+						+e.more-field._sm
+							+e.more-label Теплоход
+							+e.SELECT.form-select.js-select
+								+e.OPTION(value='') Не важно
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+
+						+e.more-field._md
+							+e.more-label Продолжительность, дней
+							+e.more-field-in
+								+e.SPAN.more-text от
+								+e.INPUT.more-input(type='text' name='')
+								+e.SPAN.more-text до
+								+e.INPUT.more-input(type='text' name='')
+					+e.more-row
+						+e.more-field._sm
+							+e.more-label Город отправления
+							+e.SELECT.form-select.js-select
+								+e.OPTION(value='') Любой
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+
+						+e.more-field._sm
+							+e.more-label Город прибытия
+							+e.SELECT.form-select.js-select
+								+e.OPTION(value='') Любой
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+
+						+e.more-field._sm
+							+e.more-label Через
+							+e.SELECT.form-select.js-select
+								+e.OPTION(value='') Любой
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+								+e.OPTION(value='') Самара
+
+					+e.BUTTON(type='submit').find-more-btn.btn Найти круиз
 //end reserv

@@ -4,7 +4,7 @@ if team ? team : team = []
 +b.SECTION.team(class= team.classMod ? team.classMod : '')
 	+b.container
 		+b.H2.title-md= team.title
-	+e.container.container
+	+e.container.container.js-team-slider
 		+e.person
 			+e.person-img-wrap
 				+e.person-img(style='background-image: url("img/content/team_person.jpg")')

@@ -1,6 +1,8 @@
 .reserv
 	&__container
 		max-width: 1182px
+		+xs
+			max-width: 400px
 	&__title
 		text-align: center
 		margin-bottom: 20px
@@ -9,6 +11,8 @@
 			font-size: 48px
 		+sm
 			font-size: 42px
+		+xs
+			font-size: 29px
 	&__form-in
 		position: relative
 		padding: 12px 140px 12px 17px
@@ -17,12 +21,21 @@
 		+clr
 		+lg
 			padding: 6px 140px 6px 17px
+		+md
+			padding: 6px 115px 6px 4px
 		+sm
-			padding: 0 140px 0 10px
+			padding: 0 135px 6px 0
+		+xs
+			text-align: center
+			padding: 10px
 	&__form-field
 		position: relative
 		float: left
 		padding-right: 5px
+		+xs
+			background: #e6e6e6
+			& + &
+				margin-top: 5px
 		&::after
 			position: absolute
 			top: -1px
@@ -31,6 +44,12 @@
 			width: 1px
 			content: ''
 			background: #dcdcdc
+			+sm
+				top: 0
+				bottom: -6px
+				height: auto
+			+xs
+				display: none
 		&:nth-child(1)
 			width: 25.7%
 			+sm
@@ -58,43 +77,147 @@
 				width: 100%
 			&::after
 				display: none
+				+sm
+					display: block
+				+xs
+					display: none
 		&_date
-			padding: 0 10px 0 35px
+			position: relative
+			padding: 0 45px 0 35px
+			+md
+				padding: 0 42px 0 14px
+	&__form-field .selectric
+		+xs
+			background: #e6e6e6
 	&__form-input
 		width: 100%
 		height: 46px
 		line-height: 46px
 		+f('cr', 15)
 		color: #1f1f1f
+		+placeholder-color(#1f1f1f)
+		+xs
+			background: #e6e6e6
 	&__form-select
 		display: none
 		width: 100%
-	&__btn
+	&__form-date-btn
+		position: absolute
+		top: 8px
+		right: 8px
+		+s('calendar')
+		background-color: transparent
+	&__find-btn
 		position: absolute
 		right: 0
 		top: 0
 		bottom: 0
 		width: 140px
 		border-radius: 0 3px 3px 0
+		+md
+			width: 128px
+		+xs
+			position: static
+			margin-top: 10px
+			width: auto
+			border-radius: 3px
 		&:active
 			box-shadow: inset 0 0 50px darken(#007adb, 5)
-	&__link
+	&__more
 		margin-top: 10px
 		text-align: center
-		&-decor
-			line-height: 1
-			color: $white
-			font-size: 16px
-			&:hover
-				color: #22273b
-			&:hover span
-				background-image: linear-gradient(to right, #22273b 50%, transparent 50%)
+		&-in
+			position: relative
+			z-index: 1
+			max-width: 970px
+			margin: -5px auto 0
+			padding: 50px 45px 20px
+			border-radius: 0 0 3px 3px
+			background-color: rgba(#fff, .9)
+			font-size: 0
+			+sm
+				padding: 20px 15px 15px
+			+xs
+				margin-top: 5px
+		&-row
+			display: flex
+			justify-content: space-between
+			text-align: left
+			& + &
+				margin-top: 10px
+				margin-bottom: 25px
+			+xs
+				flex-wrap: wrap
+		&-field
+			&_md
+				width: percentage(280 / 880)
+				+sm
+					width: 33%
+				+xs
+					width: 100%
+			&_sm
+				width: percentage(230 / 880)
+				+sm
+					width: 27%
+				+xs
+					width: 100%
+		&-field .selectric
+			box-shadow: 0 3px 54px rgba(0, 0, 0, 0.08)
+		&-field .selectric .label, .selectric-items li
+				font-size: 18px
+				+sm
+					font-size: 16px
+		&-label
+			margin-bottom: 5px
+			font-size: 18px
+			+sm
+				font-size: 16px
+		&-text
+			display: inline-block
+			vertical-align: middle
+			margin: 0 7px
+			font-size: 18px
+			+sm
+				font-size: 16px
+			&:first-child
+				margin-left: 0
+		&-btn
+			padding: 15px 63px
+		&-input
+			display: inline-block
+			vertical-align: middle
+			width: 110px
+			height: 46px
+			line-height: 46px
+			+f('cr', 18)
+			padding: 0 15px
+			border-radius: 3px
+			box-shadow: 0 3px 54px rgba(0, 0, 0, 0.08)
+			+sm
+				width: 90px
+				padding: 0 5px
+				font-size: 16px
+	&__link-decor
+		line-height: 1
+		color: $white
+		font-size: 16px
+		+xs
+			padding: 5px 10px
+			background: #0590ff
+			border-radius: 3px
+			color: #fff!important
 			span
-				background-image: linear-gradient(to right, rgba(#fff, .6) 50%, transparent 50%)
+				background: none!important
+		&:hover
+			color: #22273b
+		&:hover span
+			background-image: linear-gradient(to right, #22273b 50%, transparent 50%)
+		span
+			background-image: linear-gradient(to right, rgba(#fff, .6) 50%, transparent 50%)
 		
 	&_screen
-		padding: 120px 0
+		padding: 120px 0 20px
 		+lg
-			padding: 50px 0
+			padding: 50px 0 20px
 		+sm
 			padding: 35px 0
