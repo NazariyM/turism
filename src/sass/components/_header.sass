@@ -1,6 +1,6 @@
 .header
 	&__top-line
-		padding: 13px 0
+		padding: 8px 0
 		background-color: #22273b
 		+sm
 			padding: 10px 0 6px
@@ -8,81 +8,65 @@
 			padding: 5px 0
 	&__container
 		+clr
-	&__screen-container
-		+clr
-		+xs
-			display: flex
-			flex-direction: column
-			&::after
-				content: none
 	&__nav
 		float: left
-	&__location
-		float: right
-		+xs
-			margin-top: 9px
-		.dropdown__list
-			top: 141%
-			+sm
-				top: 125%
-		.dropdown__text
-			+sm
-				margin-left: 15px
-				font-size: 14px
-			+xs
-				margin-left: 18px
-				font-size: 16px
 	&__screen
 		position: relative
-		min-height: 430px
+		min-height: 810px
 		padding: 50px 0 40px
-		height: calc(100vh - 222px)
+		+lg
+			height: calc(100vh - 49px)
+			padding: 35px 0 40px
+			min-height: 0
 		+sm
+			height: calc(100vh - 41px)
 			padding: 40px 0 60px
-			height: auto
 			min-height: 0
 		+xs
 			padding: 35px 0 45px
-		&-picture
+		&::before
+			pointer-events: none
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			height: 200px
+			width: 100%
+			z-index: 1
+			background-image: linear-gradient(0deg, transparent 0, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.45) 100%)
+			+lg
+				height: 120px
+				background-image: linear-gradient(0deg, transparent 0, rgba(0, 0, 0, 0.45) 38%, rgba(0, 0, 0, 0.45) 100%)
+		&::after
+			content: ''
+			position: absolute
+			right: 17%
+			bottom: -60px
+			z-index: 1
+			background: url(../img/bg/best-label.png) no-repeat 50% 50%/cover
+			width: 146px
+			height: 222px
+			+lg
+				right: 6%
+				bottom: -75px
+			+md
+				right: 1%
+				bottom: -90px
+			+sm
+				display: none
+		&-container
+			position: relative
+			z-index: 2
+			+clr
+			+xs
+				display: flex
+				flex-direction: column
+				&::after
+					content: none
+		&-pic
 			+cover
 			+coverdiv
 			z-index: -1
-			+lg
-				background-position: 0 60%
-			+sm
-				background-size: 200%
-				background-position: 28% 70%
-			+xs
-				background-size: cover
-				background-position: 40% 50%
-		
-		&-title
-			padding-top: 95px
-			+f('cb', 41)
-			color: $white
-			text-shadow: 0 1px 2px rgba(0, 2, 1, 0.8)
-			text-transform: uppercase
-			text-align: center
-			line-height: 1.3
-			+lg
-				padding-top: 110px
-				font-size: 37px
-			+md
-				font-size: 35px
-			+sm
-				padding-top: 55px
-				font-size: 28px
-			+xs
-				font-size: 25px
-			+r(399)
-				font-size: 18px
-			
-			div:nth-child(3)
-				margin-top: 45px
-				+lg
-					margin-top: 15px
-				+sm
-					margin-top: 10px
 	
 	&__logo
 		float: left
@@ -99,14 +83,14 @@
 		float: left
 		margin-left: 30px
 		+lg
-		padding-left: 65px
+			padding-left: 65px
 		+md
 			padding-left: 0
-			margin-left: 12px
+			margin-left: 15px
+		+r(919)
+			margin-top: -12px
 		+sm
 			text-align: right
-			margin-left: 44px
-			margin-top: -12px
 		+xs
 			margin: -60px 0 0
 			align-self: flex-end
@@ -127,7 +111,6 @@
 			float: none
 			order: 2
 			align-self: flex-end
-			
 
 /* nav
 	----------------------------------- */
@@ -172,11 +155,11 @@
 			text-align: center
 		&-item
 			display: inline-block
-			vertical-align: top
+			vertical-align: middle
 			&.is-active .nav__link
 				color: $blue
 			& + &
-				margin-left: 40px
+				margin-left: 46px
 				+md
 					margin-left: 25px
 				+sm
@@ -215,6 +198,10 @@
 				padding: 0 20px
 				background-color: #22273B
 				+f('cl', 22)
+			&_main
+				+f('cb', 24)
+				+sm
+					font-size: 18px
 			&:hover
 				color: $blue
 				
@@ -240,7 +227,7 @@
 		background-color: rgba(#fff, .1)
 		pointer-events: none
 		+sm
-			bottom: -39px
+			bottom: -51px
 		+xs
 			bottom: -19px
 	&__list
@@ -254,14 +241,18 @@
 			display: inline-block
 			vertical-align: top
 			+sm
-				padding: 0 9px
+				padding: 0 5px
 			+xs
 				padding: 0
 		&-link
 			position: relative
 			display: block
-			font-size: 18px
+			+f('cb', 18)
+			line-height: 1.15
 			color: $white
+			border-bottom: 1px solid rgba($white, .8)
+			+lg
+				font-size: 16px
 			+sm
 				font-size: 15px
 	&__line
@@ -274,7 +265,7 @@
 		opacity: 0
 		pointer-events: none
 		+sm
-			bottom: -38px
+			bottom: -50px
 		+xs
 			bottom: -19px
 		&.is-init

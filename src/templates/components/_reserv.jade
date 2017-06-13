@@ -1,0 +1,29 @@
+if reserv ? reserv : reserv = []
+
+//begin reserv
++b.reserv(class= reserv.classMod ? reserv.classMod : '')
+	+e.container.container
+		+e.H2.title.title-lg Онлайн бронирование
+		+e.FORM
+			+e.form-in
+				+e.form-field
+					+e.SELECT.form-select.js-select
+						+e.OPTION(value='') Город отправления
+						+e.OPTION(value='') Самара
+						+e.OPTION(value='') Самара
+						+e.OPTION(value='') Самара
+				+e.form-field
+					+e.SELECT.form-select.js-select
+						+e.OPTION(value='') Город прибытия
+						+e.OPTION(value='') Самара
+						+e.OPTION(value='') Самара
+						+e.OPTION(value='') Самара
+				+e.form-field._date
+					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)')
+				+e.form-field._date
+					+e.INPUT.form-input(type='text' placeholder='Дата отправления (от)')
+				+e.BUTTON.btn.btn(type='submit') Искать
+		+e.link
+			+e.A.link-decor.link-decor(href='#!')
+				+e.SPAN Расширенный поиск
+//end reserv

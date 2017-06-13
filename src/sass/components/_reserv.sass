@@ -1,0 +1,100 @@
+.reserv
+	&__container
+		max-width: 1182px
+	&__title
+		text-align: center
+		margin-bottom: 20px
+		+lg
+			margin-bottom: 10px
+			font-size: 48px
+		+sm
+			font-size: 42px
+	&__form-in
+		position: relative
+		padding: 12px 140px 12px 17px
+		background: $white
+		border-radius: 3px
+		+clr
+		+lg
+			padding: 6px 140px 6px 17px
+		+sm
+			padding: 0 140px 0 10px
+	&__form-field
+		position: relative
+		float: left
+		padding-right: 5px
+		&::after
+			position: absolute
+			top: -1px
+			right: 0
+			height: 50px
+			width: 1px
+			content: ''
+			background: #dcdcdc
+		&:nth-child(1)
+			width: 25.7%
+			+sm
+				width: 50%
+			+xs
+				width: 100%
+		&:nth-child(2)
+			width: 24%
+			padding-left: 5px
+			+sm
+				width: 50%
+			+xs
+				width: 100%
+		&:nth-child(3)
+			width: 25%
+			+sm
+				width: 50%
+			+xs
+				width: 100%
+		&:nth-child(4)
+			width: 23.5%
+			+sm
+				width: 50%
+			+xs
+				width: 100%
+			&::after
+				display: none
+		&_date
+			padding: 0 10px 0 35px
+	&__form-input
+		width: 100%
+		height: 46px
+		line-height: 46px
+		+f('cr', 15)
+		color: #1f1f1f
+	&__form-select
+		display: none
+		width: 100%
+	&__btn
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		width: 140px
+		border-radius: 0 3px 3px 0
+		&:active
+			box-shadow: inset 0 0 50px darken(#007adb, 5)
+	&__link
+		margin-top: 10px
+		text-align: center
+		&-decor
+			line-height: 1
+			color: $white
+			font-size: 16px
+			&:hover
+				color: #22273b
+			&:hover span
+				background-image: linear-gradient(to right, #22273b 50%, transparent 50%)
+			span
+				background-image: linear-gradient(to right, rgba(#fff, .6) 50%, transparent 50%)
+		
+	&_screen
+		padding: 120px 0
+		+lg
+			padding: 50px 0
+		+sm
+			padding: 35px 0
