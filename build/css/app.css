@@ -1278,8 +1278,32 @@ strong {
 }
 
 .why-us__item-pic {
+  position: relative;
+  display: block;
   max-width: 230px;
   margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.why-us__item-pic:hover::after {
+  -ms-transform: rotate(50deg) translate(-420%, -30%);
+  transform: rotate(50deg) translate(-420%, -30%);
+}
+
+.why-us__item-pic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -ms-transform: rotate(55deg) translate(520%, -40%);
+  transform: rotate(55deg) translate(520%, -40%);
+  width: 40px;
+  height: 145%;
+  transition: transform 0.33s ease-in;
+  background: rgba(255, 255, 255, 0.4);
+  will-change: transform;
 }
 
 .why-us__item-img {
@@ -2313,6 +2337,9 @@ strong {
   .contact_default {
     padding: 15px 0;
   }
+  .why-us__container {
+    padding: 30px 15px 0;
+  }
   .why-us__item {
     margin-bottom: 20px;
     padding: 0 10px;
@@ -2662,6 +2689,7 @@ strong {
     font-size: 14px;
   }
   .contact__form-in {
+    margin: 20px auto 0;
     text-align: center;
   }
   .contact__form-in_sm .contact__form-field {

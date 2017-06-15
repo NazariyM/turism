@@ -10,6 +10,8 @@
 		margin: 0 auto
 		+md
 			padding: 50px 15px 0
+		+sm
+			padding: 30px 15px 0
 	&__row
 		font-size: 0
 		margin: 0 -15px
@@ -27,8 +29,26 @@
 		+r(424)
 			width: 100%
 		&-pic
+			position: relative
+			display: block
 			max-width: 230px
 			margin: 0 auto
+			overflow: hidden
+			z-index: 1
+			&:hover::after
+				transform: rotate(50deg) translate(-420%, -30%)
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 2
+				transform: rotate(55deg) translate(520%, -40%)
+				width: 40px
+				height: 145%
+				transition: transform 0.33s ease-in
+				background: rgba(#fff, .4)
+				will-change: transform
 			+sm
 				max-width: 180px
 		&-img

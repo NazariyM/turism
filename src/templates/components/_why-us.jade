@@ -8,7 +8,7 @@ if whyUs ? whyUs : whyUs = []
 		+e.row
 			mixin whyUs(item)
 				+e.item
-					+e.item-pic
+					+e.A.item-pic(href='#!')
 						+e.IMG(src='img/content/why-us_#{item.pic}.png').item-img
 					+e.P.item-text= item.text
 						if item.smallText
