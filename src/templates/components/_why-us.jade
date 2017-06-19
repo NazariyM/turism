@@ -6,7 +6,7 @@ if whyUs ? whyUs : whyUs = []
 		+b.H2.title-md._norm= whyUs.title
 	+b.why-us__container
 		+e.row
-			mixin whyUs(item)
+			mixin whyUsItem(item)
 				+e.item
 					+e.A.item-pic(href='#!')
 						+e.IMG(src='img/content/why-us_#{item.pic}.png').item-img
@@ -16,5 +16,5 @@ if whyUs ? whyUs : whyUs = []
 							+e.SMALL= item.smallText
 
 			each item in whyUsList
-				+whyUs(item)
+				+whyUsItem(item)
 //end 

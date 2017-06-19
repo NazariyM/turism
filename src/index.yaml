@@ -3,3 +3,6 @@ ProjectTitle: template
 PageList:
 - file: turism.html
   ready: 100%
+
+- file: turism-6.html
+  ready: 100%

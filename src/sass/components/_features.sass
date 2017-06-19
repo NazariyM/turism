@@ -1,0 +1,57 @@
+.features
+	&_default
+		padding: 40px 0
+		+sm
+			padding: 30px 0 20px
+	&__title
+		margin-bottom: 70px
+		+md
+			margin-bottom: 40px
+		+sm
+			margin-bottom: 25px
+	&__row
+		font-size: 0
+	&__item
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px
+		text-align: center
+		+sm
+			padding: 0 10px
+		+xs
+			width: 50%
+		+r(424)
+			width: 100%
+		&-pic
+			height: 100px
+			margin-bottom: 12px
+			+vertical
+			+sm
+				transform: scale(.8)
+				margin-bottom: 0
+			&::after
+				display: inline-block
+				vertical-align: middle
+				margin: 0 auto
+				content: ''
+		&-pic_modern::after
+			+s('modern')
+		&-pic_refrigerator::after
+			+s('refrigerator')
+		&-pic_repair::after
+			+s('repair')
+		&-pic_ship::after
+			+s('ship')
+		&-descr
+			max-width: 215px
+			margin: 0 auto
+			font-size: 18px
+			line-height: 1.3
+			+lg
+				font-size: 17px
+			+sm
+				font-size: 15px
+			strong
+				display: block
+				+f('cb')

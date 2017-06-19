@@ -1,9 +1,13 @@
 $icons: (0:0)
-$icons: map-merge($icons,('calendar': (X: -51px, Y:0px, W: 26px, H: 26px, TW: 101px, TH: 67px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('call': (X: 0px, Y:-51px, W: 16px, H: 16px, TW: 101px, TH: 67px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('phone': (X: 0px, Y:0px, W: 41px, H: 41px, TW: 101px, TH: 67px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('time': (X: -26px, Y:-51px, W: 15px, H: 15px, TW: 101px, TH: 67px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('user': (X: -87px, Y:0px, W: 14px, H: 16px, TW: 101px, TH: 67px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('calendar': (X: -228px, Y:-51px, W: 26px, H: 26px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('call': (X: -228px, Y:-87px, W: 16px, H: 16px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('modern': (X: -114px, Y:0px, W: 104px, H: 91px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -228px, Y:0px, W: 41px, H: 41px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('refrigerator': (X: 0px, Y:0px, W: 104px, H: 95px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('repair': (X: 0px, Y:-105px, W: 104px, H: 91px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ship': (X: -114px, Y:-105px, W: 104px, H: 79px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('time': (X: -254px, Y:-87px, W: 15px, H: 15px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('user': (X: -228px, Y:-113px, W: 14px, H: 16px, TW: 269px, TH: 196px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -39,33 +43,58 @@ $icons: map-merge($icons,('user': (X: -87px, Y:0px, W: 14px, H: 16px, TW: 101px,
 @mixin sr($i)
   +sprite-retina($i)
 
-
-.icon-calendar
-  width: 26px
-  height: 26px
-  background-image: url('../img/sprite.png')
-  background-position: -51px 0px
-
-.icon-call
-  width: 16px
-  height: 16px
-  background-image: url('../img/sprite.png')
-  background-position: 0px -51px
-
-.icon-phone
-  width: 41px
-  height: 41px
-  background-image: url('../img/sprite.png')
-  background-position: 0px 0px
-
-.icon-time
-  width: 15px
-  height: 15px
-  background-image: url('../img/sprite.png')
-  background-position: -26px -51px
-
-.icon-user
-  width: 14px
-  height: 16px
-  background-image: url('../img/sprite.png')
-  background-position: -87px 0px
+//
+//.icon-calendar
+//  width: 26px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -51px
+//
+//.icon-call
+//  width: 16px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -87px
+//
+//.icon-modern
+//  width: 104px
+//  height: 91px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px 0px
+//
+//.icon-phone
+//  width: 41px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px 0px
+//
+//.icon-refrigerator
+//  width: 104px
+//  height: 95px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-repair
+//  width: 104px
+//  height: 91px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -105px
+//
+//.icon-ship
+//  width: 104px
+//  height: 79px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -105px
+//
+//.icon-time
+//  width: 15px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -254px -87px
+//
+//.icon-user
+//  width: 14px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -228px -113px
+//

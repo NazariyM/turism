@@ -1,8 +1,10 @@
 if features ? features : features = []
 
 //begin features
-+b.features(class= featuresClass ? featuresClass : '')
++b.features(class= features.classMod ? features.classMod : '')
 	+e.container.container
+		if features.title
+			+e.title.H3.title-md._font Ваш комфортный отдых - Наша забота
 		+e.row
 			mixin featuresItem(item)
 				+e.item

@@ -5,6 +5,49 @@ extends layouts/_layout
 
 block content
 
+	//BEGIN header
+	+b.HEADER.header
+		+e.top-line
+			+e.container.container
+				+b.hamburger.js-hamburger
+					+e.line
+					+e.line
+					+e.line
+				+b.nav.header__nav.js-nav
+					+e.UL.list
+						+e.LI.list-item
+							+e.A.list-link._main(href='#!') Теплоход Алексей Толстой
+						+e.LI.list-item
+							+e.A.list-link(href='#!') Сотрудничество
+						+e.LI.list-item
+							+e.A.list-link(href='#!') Новости
+						+e.LI.list-item
+							+e.A.list-link(href='#!') Контакты
+
+		+e.screen._has-label
+			+e.screen-pic(style='background-image: url(img/bg/entry-screen_bg.jpg)')
+			+e.screen-container.container
+				+b.A(href='#!').logo.header__logo
+					+e.IMG(src='img/logo.png').img
+				+b.menu.header__menu
+					+e.UL.list.js-menu
+						+e.LI.list-item.is-active
+							+e.A.list-link(href='#!') Речные круизы
+						+e.LI.list-item
+							+e.A.list-link(href='#!') Туры по России и СНГ
+						+e.LI.list-item
+							+e.A.list-link(href='#!') Международные туры
+						+e.LI.line.js-moving-line
+				+b.call-me.header__call-me
+					+e.A(href='tel:88463327555').number 8 (846) 332-75-55
+					+e.BUTTON(type='button').btn.link-decor
+						+e.SPAN Перезвоните мне
+				+e.A(href='#!').pick-btn.btn Подобрать тур
+
+			-var reserv = {classMod: '_screen'};
+			include components/_reserv
+	//END header
+
 	//begin contact
 	+b.SECTION.contact._default
 		+e.container.container

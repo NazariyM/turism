@@ -1,0 +1,45 @@
+.awards
+	&__gallery
+		margin-top: 50px
+		+clr
+		+md
+			margin-top: 30px
+		&-item
+			position: relative
+			float: left
+			width: calc(100% / 6 - 20px)
+			margin: 0 10px 20px
+			padding-top: percentage(263/1256)
+			+md
+				width: calc(100% / 6 - 10px)
+				margin: 0 5px 15px
+			+sm
+				padding-top: 0
+				height: 264px
+				width: calc(100% / 6 - 4px)
+				margin: 0 2px 15px
+		&-item:hover &-zoom
+			opacity: 1
+		&-img
+			+coverdiv
+			+cover
+			+sm
+				background-size: contain
+		&-zoom
+			opacity: 0
+			background-color: rgba(#0590ff, .8)
+			transition: opacity .4s
+			text-align: center
+			font-size: 0
+			+coverdiv
+			+vertical
+			&-icon
+				display: inline-block
+				vertical-align: middle
+				font-size: 46px
+				fill: #fff
+				
+	&_default
+		padding: 50px 0 30px
+		+md
+			padding: 20px 0 20px

@@ -4428,42 +4428,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   };
 });
 
-//=include components/dropdown.js
-$(function () {
-  (function () {
-    ymaps.ready(init);
-    var aboutMap;
-
-    function init() {
-      aboutMap = new ymaps.Map('js-about-map', {
-        center: [53.17558202121662, 50.06785157719889],
-        zoom: 12
-      });
-
-      // locBalloon = new ymaps.Balloon(myMap);
-      // locBalloon.options.setParent(myMap.options);
-      // myMap.balloon.open([53.19480611857074, 50.1113521604379], {
-      // 	contentBody: '<div class="location__balloon"><div class="location__balloon-logo"><img src="img/logo.svg"></div> <div class="location__balloon-text">Ленинская улица 168</div></div>'
-      // }, {
-      // 	closeButton: false,
-      // 	autoPan: true
-      // });
-
-
-      // [53.188681775199655,50.11000232293693]
-      // [53.187078071239924,50.07857949999998]
-      // [53.25022470164098,50.245655771163925]
-
-      aboutMap.behaviors.disable('scrollZoom');
-      aboutMap.controls.remove('zoomControl');
-      aboutMap.controls.remove('geolocationControl');
-      aboutMap.controls.remove('searchControl');
-      aboutMap.controls.remove('trafficControl');
-      aboutMap.controls.remove('typeSelector');
-      aboutMap.controls.remove('fullscreenControl');
-    }
-  })();
-});
 $(function () {
 
   // toggle nav
@@ -4541,6 +4505,8 @@ $(function () {
 });
 $(function () {
 
+  $('[data-fancybox]').fancybox();
+
   $('.js-reserv-more').on('click', function () {
     $('.reserv__more-in').fadeToggle();
   });
@@ -4590,6 +4556,7 @@ $(function () {
 
   (function () {
     var $teamSLider = $('.js-team-slider');
+    var $awardsSlider = $('.js-awards-gallery');
 
     function initSlider(slider) {
       initSlickSlider(slider);
@@ -4626,5 +4593,54 @@ $(function () {
       }
     }
     initSlider($teamSLider);
+    initSlider($awardsSlider);
+  })();
+
+  $(function () {
+    (function () {
+      ymaps.ready(init);
+      var aboutMap;
+
+      function init() {
+        aboutMap = new ymaps.Map('js-about-map', {
+          center: [53.17558202121662, 50.06785157719889],
+          zoom: 12
+        });
+
+        aboutMap.behaviors.disable('scrollZoom');
+        aboutMap.controls.remove('zoomControl');
+        aboutMap.controls.remove('geolocationControl');
+        aboutMap.controls.remove('searchControl');
+        aboutMap.controls.remove('trafficControl');
+        aboutMap.controls.remove('typeSelector');
+        aboutMap.controls.remove('fullscreenControl');
+      }
+    })();
+  });
+
+  (function () {
+    ymaps.ready(init);
+    var realTimeMap, currentLoc;
+
+    function init() {
+      realTimeMap = new ymaps.Map('js-real-time-map', {
+        center: [53.27351976207731, 50.140731378906196],
+        zoom: 5
+      }), currentLoc = new ymaps.Placemark([53.27351976207731, 50.140731378906196], {
+        // iconLayout: 'default#image',
+        // iconImageHref: '../img/sprite.png',
+        // iconImageSize: [33, 27],
+        // iconImageOffset: [-15, -27],
+      });
+
+      realTimeMap.geoObjects.add(currentLoc);
+      realTimeMap.behaviors.disable('scrollZoom');
+      realTimeMap.controls.remove('zoomControl');
+      realTimeMap.controls.remove('geolocationControl');
+      realTimeMap.controls.remove('searchControl');
+      realTimeMap.controls.remove('trafficControl');
+      realTimeMap.controls.remove('typeSelector');
+      realTimeMap.controls.remove('fullscreenControl');
+    }
   })();
 });

@@ -3,7 +3,5 @@
 //=include lib/fancybox.min.js
 //=include lib/slick.min.js
 //=include lib/selectric.js
-//=include components/dropdown.js
-//=include components/maps.js
 //=include components/nav.js
 //=include common.js

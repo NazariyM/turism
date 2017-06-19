@@ -1,5 +1,7 @@
 $(function () {
 
+  $('[data-fancybox]').fancybox();
+
   $('.js-reserv-more').on('click', function () {
     $('.reserv__more-in').fadeToggle();
   });
@@ -49,6 +51,7 @@ $(function () {
 
   (function () {
     var $teamSLider = $('.js-team-slider');
+    var $awardsSlider = $('.js-awards-gallery');
 
     function initSlider(slider) {
       initSlickSlider(slider);
@@ -85,5 +88,58 @@ $(function () {
       }
     }
     initSlider($teamSLider);
+    initSlider($awardsSlider);
+  })();
+
+  $(function () {
+    (function () {
+      ymaps.ready(init);
+      var aboutMap;
+
+      function init() {
+        aboutMap = new ymaps.Map('js-about-map', {
+          center: [53.17558202121662,50.06785157719889],
+          zoom: 12
+        });
+
+        aboutMap.behaviors.disable('scrollZoom');
+        aboutMap.controls.remove('zoomControl');
+        aboutMap.controls.remove('geolocationControl');
+        aboutMap.controls.remove('searchControl');
+        aboutMap.controls.remove('trafficControl');
+        aboutMap.controls.remove('typeSelector');
+        aboutMap.controls.remove('fullscreenControl');
+
+      }
+    })();
+
+  });
+
+  (function () {
+    ymaps.ready(init);
+    var realTimeMap, currentLoc;
+
+    function init() {
+      realTimeMap = new ymaps.Map('js-real-time-map', {
+        center: [53.27351976207731,50.140731378906196],
+        zoom: 5
+      }),
+        currentLoc = new ymaps.Placemark([53.27351976207731,50.140731378906196], {
+          // iconLayout: 'default#image',
+          // iconImageHref: '../img/sprite.png',
+          // iconImageSize: [33, 27],
+          // iconImageOffset: [-15, -27],
+        });
+
+      realTimeMap.geoObjects.add(currentLoc);
+      realTimeMap.behaviors.disable('scrollZoom');
+      realTimeMap.controls.remove('zoomControl');
+      realTimeMap.controls.remove('geolocationControl');
+      realTimeMap.controls.remove('searchControl');
+      realTimeMap.controls.remove('trafficControl');
+      realTimeMap.controls.remove('typeSelector');
+      realTimeMap.controls.remove('fullscreenControl');
+
+    }
   })();
 });
